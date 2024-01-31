@@ -2,11 +2,15 @@
 ## Getting started
 After cloning the repo, it's suggested to setup a virtualenv and install required packages:
 
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 From there, you can run `torch_cppn.py`:
+```
+python torch_cppn.py
+```
 
-`python torch_cppn.py`
 
 This should generate a random network and display the generated image with matplotlib
 
