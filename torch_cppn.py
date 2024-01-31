@@ -23,7 +23,6 @@ def read_config():
     max_layer_size = int(config["network"]["max_layer_size"])
     big_or_small_layers = config["network"]["big_or_small_layers"].lower() == "true"
     act_funcs = config["network"]["act_funcs"].split()
-    
 
     color_maps = config["drawing"]["color_maps"].split()
     image_width = int(config["drawing"]["image_width"])
@@ -54,7 +53,12 @@ class RandomNetwork(nn.Module):
         num_layers = random.randint(min_layers, max_layers)
 
         if big_or_small_layers:
-            layer_sizes = [random.choice([random.randint(2, 25), random.randint(2, max_layer_size)]) for _ in range(num_layers)]
+            layer_sizes = [
+                random.choice(
+                    [random.randint(2, 25), random.randint(2, max_layer_size)]
+                )
+                for _ in range(num_layers)
+            ]
         else:
             layer_sizes = [random.randint(2, max_layer_size) for _ in range(num_layers)]
 
