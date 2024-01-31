@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=11, bias=True)
+    (1): Sigmoid()
+    (2): Linear(in_features=11, out_features=66, bias=True)
+    (3): RReLU(lower=0.125, upper=0.3333333333333333)
+    (4): Linear(in_features=66, out_features=93, bias=True)
+    (5): Hardshrink(0.5)
+    (6): Linear(in_features=93, out_features=65, bias=True)
+    (7): GELU(approximate='none')
+    (8): Linear(in_features=65, out_features=49, bias=True)
+    (9): Tanhshrink()
+    (10): Linear(in_features=49, out_features=1, bias=True)
+    (11): Hardswish()
+  )
+)

@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=31, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Linear(in_features=31, out_features=84, bias=True)
+    (3): SELU()
+    (4): Linear(in_features=84, out_features=1, bias=True)
+    (5): Hardswish()
+  )
+)

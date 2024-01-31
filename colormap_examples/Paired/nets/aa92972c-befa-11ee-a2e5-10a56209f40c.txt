@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=38, bias=True)
+    (1): Softsign()
+    (2): Linear(in_features=38, out_features=134, bias=True)
+    (3): Softplus(beta=1, threshold=20)
+    (4): Linear(in_features=134, out_features=103, bias=True)
+    (5): LogSigmoid()
+    (6): Linear(in_features=103, out_features=17, bias=True)
+    (7): LeakyReLU(negative_slope=0.01)
+    (8): Linear(in_features=17, out_features=1, bias=True)
+    (9): LogSigmoid()
+  )
+)

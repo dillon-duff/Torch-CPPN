@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=97, bias=True)
+    (1): Hardsigmoid()
+    (2): Linear(in_features=97, out_features=46, bias=True)
+    (3): Hardsigmoid()
+    (4): Linear(in_features=46, out_features=1, bias=True)
+    (5): Tanhshrink()
+  )
+)

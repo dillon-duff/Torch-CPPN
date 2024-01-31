@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=123, bias=True)
+    (1): ReLU6()
+    (2): Linear(in_features=123, out_features=14, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=14, out_features=9, bias=True)
+    (5): PReLU(num_parameters=1)
+    (6): Linear(in_features=9, out_features=134, bias=True)
+    (7): LogSigmoid()
+    (8): Linear(in_features=134, out_features=1, bias=True)
+    (9): LogSigmoid()
+  )
+)

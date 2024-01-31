@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=8, bias=True)
+    (1): Tanhshrink()
+    (2): Linear(in_features=8, out_features=11, bias=True)
+    (3): LeakyReLU(negative_slope=0.01)
+    (4): Linear(in_features=11, out_features=11, bias=True)
+    (5): Hardsigmoid()
+    (6): Linear(in_features=11, out_features=80, bias=True)
+    (7): ReLU()
+    (8): Linear(in_features=80, out_features=1, bias=True)
+    (9): ELU(alpha=1.0)
+  )
+)

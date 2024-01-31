@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=12, bias=True)
+    (1): Sigmoid()
+    (2): Linear(in_features=12, out_features=16, bias=True)
+    (3): Tanh()
+    (4): Linear(in_features=16, out_features=140, bias=True)
+    (5): Tanh()
+    (6): Linear(in_features=140, out_features=17, bias=True)
+    (7): Hardswish()
+    (8): Linear(in_features=17, out_features=198, bias=True)
+    (9): Hardtanh(min_val=-1.0, max_val=1.0)
+    (10): Linear(in_features=198, out_features=14, bias=True)
+    (11): LeakyReLU(negative_slope=0.01)
+    (12): Linear(in_features=14, out_features=1, bias=True)
+    (13): ReLU()
+  )
+)

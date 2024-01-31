@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=138, bias=True)
+    (1): Identity()
+    (2): Linear(in_features=138, out_features=18, bias=True)
+    (3): Mish()
+    (4): Linear(in_features=18, out_features=137, bias=True)
+    (5): Hardshrink(0.5)
+    (6): Linear(in_features=137, out_features=112, bias=True)
+    (7): LogSigmoid()
+    (8): Linear(in_features=112, out_features=1, bias=True)
+    (9): ELU(alpha=1.0)
+  )
+)

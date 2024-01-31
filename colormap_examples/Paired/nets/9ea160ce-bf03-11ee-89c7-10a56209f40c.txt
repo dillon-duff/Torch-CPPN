@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=6, bias=True)
+    (1): Softshrink(0.5)
+    (2): Linear(in_features=6, out_features=146, bias=True)
+    (3): Softshrink(0.5)
+    (4): Linear(in_features=146, out_features=20, bias=True)
+    (5): Mish()
+    (6): Linear(in_features=20, out_features=1, bias=True)
+    (7): ELU(alpha=1.0)
+  )
+)

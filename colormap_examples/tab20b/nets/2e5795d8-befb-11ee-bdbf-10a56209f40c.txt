@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=138, bias=True)
+    (1): RReLU(lower=0.125, upper=0.3333333333333333)
+    (2): Linear(in_features=138, out_features=81, bias=True)
+    (3): Hardshrink(0.5)
+    (4): Linear(in_features=81, out_features=24, bias=True)
+    (5): CELU(alpha=1.0)
+    (6): Linear(in_features=24, out_features=39, bias=True)
+    (7): ReLU()
+    (8): Linear(in_features=39, out_features=1, bias=True)
+    (9): Hardsigmoid()
+  )
+)

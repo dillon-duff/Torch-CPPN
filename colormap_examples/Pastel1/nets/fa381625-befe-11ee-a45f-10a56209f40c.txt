@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=30, bias=True)
+    (1): SiLU()
+    (2): Linear(in_features=30, out_features=114, bias=True)
+    (3): Identity()
+    (4): Linear(in_features=114, out_features=65, bias=True)
+    (5): Tanhshrink()
+    (6): Linear(in_features=65, out_features=106, bias=True)
+    (7): LogSigmoid()
+    (8): Linear(in_features=106, out_features=50, bias=True)
+    (9): GELU(approximate='none')
+    (10): Linear(in_features=50, out_features=127, bias=True)
+    (11): ELU(alpha=1.0)
+    (12): Linear(in_features=127, out_features=1, bias=True)
+    (13): Sigmoid()
+  )
+)

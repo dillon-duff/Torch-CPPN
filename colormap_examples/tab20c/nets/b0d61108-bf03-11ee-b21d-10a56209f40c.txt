@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=181, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=181, out_features=191, bias=True)
+    (3): Softsign()
+    (4): Linear(in_features=191, out_features=181, bias=True)
+    (5): Mish()
+    (6): Linear(in_features=181, out_features=20, bias=True)
+    (7): Tanhshrink()
+    (8): Linear(in_features=20, out_features=137, bias=True)
+    (9): Tanhshrink()
+    (10): Linear(in_features=137, out_features=1, bias=True)
+    (11): ReLU6()
+  )
+)

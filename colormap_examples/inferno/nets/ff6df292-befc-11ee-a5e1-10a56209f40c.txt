@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=111, bias=True)
+    (1): Hardtanh(min_val=-1.0, max_val=1.0)
+    (2): Linear(in_features=111, out_features=10, bias=True)
+    (3): CELU(alpha=1.0)
+    (4): Linear(in_features=10, out_features=24, bias=True)
+    (5): Mish()
+    (6): Linear(in_features=24, out_features=1, bias=True)
+    (7): SELU()
+  )
+)

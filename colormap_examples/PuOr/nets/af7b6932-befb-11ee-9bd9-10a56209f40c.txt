@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=79, bias=True)
+    (1): ReLU6()
+    (2): Linear(in_features=79, out_features=53, bias=True)
+    (3): LeakyReLU(negative_slope=0.01)
+    (4): Linear(in_features=53, out_features=147, bias=True)
+    (5): Sigmoid()
+    (6): Linear(in_features=147, out_features=62, bias=True)
+    (7): Mish()
+    (8): Linear(in_features=62, out_features=55, bias=True)
+    (9): SiLU()
+    (10): Linear(in_features=55, out_features=55, bias=True)
+    (11): LeakyReLU(negative_slope=0.01)
+    (12): Linear(in_features=55, out_features=1, bias=True)
+    (13): Identity()
+  )
+)

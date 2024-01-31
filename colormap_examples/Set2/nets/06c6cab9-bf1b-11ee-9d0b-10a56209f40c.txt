@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=122, bias=True)
+    (1): LogSigmoid()
+    (2): Linear(in_features=122, out_features=136, bias=True)
+    (3): Softplus(beta=1, threshold=20)
+    (4): Linear(in_features=136, out_features=1, bias=True)
+    (5): Mish()
+  )
+)

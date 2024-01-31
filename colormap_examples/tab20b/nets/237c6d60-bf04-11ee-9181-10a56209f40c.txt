@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=49, bias=True)
+    (1): CELU(alpha=1.0)
+    (2): Linear(in_features=49, out_features=19, bias=True)
+    (3): Identity()
+    (4): Linear(in_features=19, out_features=45, bias=True)
+    (5): Hardshrink(0.5)
+    (6): Linear(in_features=45, out_features=41, bias=True)
+    (7): Identity()
+    (8): Linear(in_features=41, out_features=1, bias=True)
+    (9): Softshrink(0.5)
+  )
+)

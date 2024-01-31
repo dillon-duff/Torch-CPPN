@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=175, bias=True)
+    (1): PReLU(num_parameters=1)
+    (2): Linear(in_features=175, out_features=914, bias=True)
+    (3): Identity()
+    (4): Linear(in_features=914, out_features=1, bias=True)
+    (5): Hardswish()
+  )
+)

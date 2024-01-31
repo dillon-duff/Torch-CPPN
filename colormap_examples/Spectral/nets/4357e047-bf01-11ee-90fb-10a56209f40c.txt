@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=194, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=194, out_features=15, bias=True)
+    (3): Tanh()
+    (4): Linear(in_features=15, out_features=20, bias=True)
+    (5): Tanh()
+    (6): Linear(in_features=20, out_features=180, bias=True)
+    (7): Identity()
+    (8): Linear(in_features=180, out_features=165, bias=True)
+    (9): Mish()
+    (10): Linear(in_features=165, out_features=131, bias=True)
+    (11): Hardsigmoid()
+    (12): Linear(in_features=131, out_features=1, bias=True)
+    (13): Tanh()
+  )
+)

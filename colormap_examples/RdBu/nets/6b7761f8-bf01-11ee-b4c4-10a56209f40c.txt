@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=101, bias=True)
+    (1): SiLU()
+    (2): Linear(in_features=101, out_features=9, bias=True)
+    (3): Softshrink(0.5)
+    (4): Linear(in_features=9, out_features=1, bias=True)
+    (5): Softshrink(0.5)
+  )
+)

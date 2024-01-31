@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=54, bias=True)
+    (1): Identity()
+    (2): Linear(in_features=54, out_features=97, bias=True)
+    (3): LogSigmoid()
+    (4): Linear(in_features=97, out_features=1, bias=True)
+    (5): LeakyReLU(negative_slope=0.01)
+  )
+)

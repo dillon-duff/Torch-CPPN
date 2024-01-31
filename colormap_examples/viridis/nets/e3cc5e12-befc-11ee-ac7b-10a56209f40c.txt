@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=147, bias=True)
+    (1): LogSigmoid()
+    (2): Linear(in_features=147, out_features=42, bias=True)
+    (3): RReLU(lower=0.125, upper=0.3333333333333333)
+    (4): Linear(in_features=42, out_features=94, bias=True)
+    (5): Tanh()
+    (6): Linear(in_features=94, out_features=136, bias=True)
+    (7): Identity()
+    (8): Linear(in_features=136, out_features=98, bias=True)
+    (9): Mish()
+    (10): Linear(in_features=98, out_features=74, bias=True)
+    (11): PReLU(num_parameters=1)
+    (12): Linear(in_features=74, out_features=1, bias=True)
+    (13): Softsign()
+  )
+)

@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=31, bias=True)
+    (1): CELU(alpha=1.0)
+    (2): Linear(in_features=31, out_features=9, bias=True)
+    (3): Sigmoid()
+    (4): Linear(in_features=9, out_features=11, bias=True)
+    (5): Mish()
+    (6): Linear(in_features=11, out_features=27, bias=True)
+    (7): Tanhshrink()
+    (8): Linear(in_features=27, out_features=47, bias=True)
+    (9): Sigmoid()
+    (10): Linear(in_features=47, out_features=1, bias=True)
+    (11): Mish()
+  )
+)

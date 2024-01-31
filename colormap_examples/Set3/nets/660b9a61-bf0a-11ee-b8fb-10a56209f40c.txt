@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=6, bias=True)
+    (1): Hardsigmoid()
+    (2): Linear(in_features=6, out_features=14, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=14, out_features=59, bias=True)
+    (5): LogSigmoid()
+    (6): Linear(in_features=59, out_features=18, bias=True)
+    (7): CELU(alpha=1.0)
+    (8): Linear(in_features=18, out_features=63, bias=True)
+    (9): LogSigmoid()
+    (10): Linear(in_features=63, out_features=15, bias=True)
+    (11): Hardswish()
+    (12): Linear(in_features=15, out_features=1, bias=True)
+    (13): Sigmoid()
+  )
+)

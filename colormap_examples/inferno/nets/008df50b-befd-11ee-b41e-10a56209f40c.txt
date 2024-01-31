@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=65, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Linear(in_features=65, out_features=121, bias=True)
+    (3): PReLU(num_parameters=1)
+    (4): Linear(in_features=121, out_features=1, bias=True)
+    (5): Tanh()
+  )
+)

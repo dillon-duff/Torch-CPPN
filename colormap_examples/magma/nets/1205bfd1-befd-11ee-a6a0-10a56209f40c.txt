@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=114, bias=True)
+    (1): PReLU(num_parameters=1)
+    (2): Linear(in_features=114, out_features=146, bias=True)
+    (3): Tanh()
+    (4): Linear(in_features=146, out_features=55, bias=True)
+    (5): SiLU()
+    (6): Linear(in_features=55, out_features=1, bias=True)
+    (7): Identity()
+  )
+)

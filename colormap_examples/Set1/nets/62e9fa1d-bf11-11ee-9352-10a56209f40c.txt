@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=2, bias=True)
+    (1): ReLU6()
+    (2): Linear(in_features=2, out_features=2, bias=True)
+    (3): SELU()
+    (4): Linear(in_features=2, out_features=1, bias=True)
+    (5): Hardshrink(0.5)
+    (6): Linear(in_features=1, out_features=1, bias=True)
+    (7): LogSigmoid()
+    (8): Linear(in_features=1, out_features=2, bias=True)
+    (9): ELU(alpha=1.0)
+    (10): Linear(in_features=2, out_features=1, bias=True)
+    (11): LogSigmoid()
+  )
+)

@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=106, bias=True)
+    (1): Hardsigmoid()
+    (2): Linear(in_features=106, out_features=11, bias=True)
+    (3): GELU(approximate='none')
+    (4): Linear(in_features=11, out_features=170, bias=True)
+    (5): Hardsigmoid()
+    (6): Linear(in_features=170, out_features=1, bias=True)
+    (7): Hardsigmoid()
+  )
+)

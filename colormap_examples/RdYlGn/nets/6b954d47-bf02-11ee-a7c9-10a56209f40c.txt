@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=169, bias=True)
+    (1): Sigmoid()
+    (2): Linear(in_features=169, out_features=183, bias=True)
+    (3): Mish()
+    (4): Linear(in_features=183, out_features=17, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=17, out_features=18, bias=True)
+    (7): ELU(alpha=1.0)
+    (8): Linear(in_features=18, out_features=8, bias=True)
+    (9): Identity()
+    (10): Linear(in_features=8, out_features=1, bias=True)
+    (11): Softsign()
+  )
+)

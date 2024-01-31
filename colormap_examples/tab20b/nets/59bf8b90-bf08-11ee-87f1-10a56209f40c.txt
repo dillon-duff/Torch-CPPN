@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=86, bias=True)
+    (1): LogSigmoid()
+    (2): Linear(in_features=86, out_features=89, bias=True)
+    (3): Identity()
+    (4): Linear(in_features=89, out_features=1, bias=True)
+    (5): Tanhshrink()
+  )
+)

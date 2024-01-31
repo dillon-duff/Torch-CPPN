@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=7, bias=True)
+    (1): Hardshrink(0.5)
+    (2): Linear(in_features=7, out_features=12, bias=True)
+    (3): Hardswish()
+    (4): Linear(in_features=12, out_features=101, bias=True)
+    (5): ReLU6()
+    (6): Linear(in_features=101, out_features=13, bias=True)
+    (7): Mish()
+    (8): Linear(in_features=13, out_features=190, bias=True)
+    (9): Tanh()
+    (10): Linear(in_features=190, out_features=1, bias=True)
+    (11): Softshrink(0.5)
+  )
+)

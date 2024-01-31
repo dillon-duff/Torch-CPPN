@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=144, bias=True)
+    (1): Hardshrink(0.5)
+    (2): Linear(in_features=144, out_features=197, bias=True)
+    (3): Hardshrink(0.5)
+    (4): Linear(in_features=197, out_features=195, bias=True)
+    (5): LeakyReLU(negative_slope=0.01)
+    (6): Linear(in_features=195, out_features=17, bias=True)
+    (7): Identity()
+    (8): Linear(in_features=17, out_features=169, bias=True)
+    (9): Tanhshrink()
+    (10): Linear(in_features=169, out_features=1, bias=True)
+    (11): PReLU(num_parameters=1)
+  )
+)

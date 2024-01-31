@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=59, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=59, out_features=51, bias=True)
+    (3): SiLU()
+    (4): Linear(in_features=51, out_features=1, bias=True)
+    (5): RReLU(lower=0.125, upper=0.3333333333333333)
+  )
+)

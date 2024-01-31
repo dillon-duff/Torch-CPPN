@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=62, bias=True)
+    (1): Softsign()
+    (2): Linear(in_features=62, out_features=80, bias=True)
+    (3): LeakyReLU(negative_slope=0.01)
+    (4): Linear(in_features=80, out_features=1, bias=True)
+    (5): CELU(alpha=1.0)
+  )
+)

@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=122, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=122, out_features=6, bias=True)
+    (3): Softsign()
+    (4): Linear(in_features=6, out_features=1, bias=True)
+    (5): Tanh()
+  )
+)

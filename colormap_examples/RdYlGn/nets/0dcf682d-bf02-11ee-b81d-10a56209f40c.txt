@@ -1,0 +1,16 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=17, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Linear(in_features=17, out_features=170, bias=True)
+    (3): GELU(approximate='none')
+    (4): Linear(in_features=170, out_features=9, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=9, out_features=149, bias=True)
+    (7): Softplus(beta=1, threshold=20)
+    (8): Linear(in_features=149, out_features=110, bias=True)
+    (9): ReLU()
+    (10): Linear(in_features=110, out_features=1, bias=True)
+    (11): Tanh()
+  )
+)

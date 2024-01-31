@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=579, bias=True)
+    (1): Tanhshrink()
+    (2): Linear(in_features=579, out_features=209, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=209, out_features=255, bias=True)
+    (5): ELU(alpha=1.0)
+    (6): Linear(in_features=255, out_features=1, bias=True)
+    (7): Hardshrink(0.5)
+  )
+)

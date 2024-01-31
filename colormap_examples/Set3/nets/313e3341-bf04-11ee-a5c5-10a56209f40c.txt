@@ -1,0 +1,12 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=11, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=11, out_features=37, bias=True)
+    (3): Softplus(beta=1, threshold=20)
+    (4): Linear(in_features=37, out_features=18, bias=True)
+    (5): Mish()
+    (6): Linear(in_features=18, out_features=1, bias=True)
+    (7): Softplus(beta=1, threshold=20)
+  )
+)

@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=196, bias=True)
+    (1): Mish()
+    (2): Linear(in_features=196, out_features=13, bias=True)
+    (3): GELU(approximate='none')
+    (4): Linear(in_features=13, out_features=11, bias=True)
+    (5): Softsign()
+    (6): Linear(in_features=11, out_features=138, bias=True)
+    (7): Mish()
+    (8): Linear(in_features=138, out_features=14, bias=True)
+    (9): Tanh()
+    (10): Linear(in_features=14, out_features=135, bias=True)
+    (11): Tanhshrink()
+    (12): Linear(in_features=135, out_features=1, bias=True)
+    (13): Tanh()
+  )
+)

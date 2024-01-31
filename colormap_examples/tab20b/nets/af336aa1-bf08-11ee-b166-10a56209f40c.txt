@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=46, bias=True)
+    (1): ReLU6()
+    (2): Linear(in_features=46, out_features=207, bias=True)
+    (3): Tanhshrink()
+    (4): Linear(in_features=207, out_features=898, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=898, out_features=733, bias=True)
+    (7): Identity()
+    (8): Linear(in_features=733, out_features=917, bias=True)
+    (9): Tanhshrink()
+    (10): Linear(in_features=917, out_features=337, bias=True)
+    (11): PReLU(num_parameters=1)
+    (12): Linear(in_features=337, out_features=1, bias=True)
+    (13): Hardswish()
+  )
+)

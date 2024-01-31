@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=79, bias=True)
+    (1): Softshrink(0.5)
+    (2): Linear(in_features=79, out_features=75, bias=True)
+    (3): SELU()
+    (4): Linear(in_features=75, out_features=78, bias=True)
+    (5): SELU()
+    (6): Linear(in_features=78, out_features=10, bias=True)
+    (7): LogSigmoid()
+    (8): Linear(in_features=10, out_features=96, bias=True)
+    (9): CELU(alpha=1.0)
+    (10): Linear(in_features=96, out_features=6, bias=True)
+    (11): GELU(approximate='none')
+    (12): Linear(in_features=6, out_features=1, bias=True)
+    (13): Softplus(beta=1, threshold=20)
+  )
+)

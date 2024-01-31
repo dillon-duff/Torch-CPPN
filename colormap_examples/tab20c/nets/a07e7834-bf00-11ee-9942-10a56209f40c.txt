@@ -1,0 +1,18 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=113, bias=True)
+    (1): Tanhshrink()
+    (2): Linear(in_features=113, out_features=182, bias=True)
+    (3): Hardtanh(min_val=-1.0, max_val=1.0)
+    (4): Linear(in_features=182, out_features=18, bias=True)
+    (5): Softplus(beta=1, threshold=20)
+    (6): Linear(in_features=18, out_features=20, bias=True)
+    (7): Mish()
+    (8): Linear(in_features=20, out_features=151, bias=True)
+    (9): Sigmoid()
+    (10): Linear(in_features=151, out_features=5, bias=True)
+    (11): Softsign()
+    (12): Linear(in_features=5, out_features=1, bias=True)
+    (13): Mish()
+  )
+)

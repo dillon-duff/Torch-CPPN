@@ -1,0 +1,14 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=18, bias=True)
+    (1): Tanhshrink()
+    (2): Linear(in_features=18, out_features=168, bias=True)
+    (3): PReLU(num_parameters=1)
+    (4): Linear(in_features=168, out_features=8, bias=True)
+    (5): SiLU()
+    (6): Linear(in_features=8, out_features=10, bias=True)
+    (7): Mish()
+    (8): Linear(in_features=10, out_features=1, bias=True)
+    (9): Softsign()
+  )
+)

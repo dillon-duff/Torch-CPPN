@@ -1,0 +1,36 @@
+[network]
+
+min_layers = 2
+max_layers = 13
+
+max_layer_size = 150
+
+big_or_small_layers = False
+
+act_funcs = elu relu sigmoid identity softplus tanh
+
+
+[drawing]
+
+color_maps = Pastel1 Pastel2 Paired Accent Dark2 Set1 Set2 Set3 tab10 tab20 tab20b tab20c twilight twilight_shifted hsv PiYG PRGn BrBG PuOr RdGy RdBu RdYlBu RdYlGn Spectral coolwarm bwr seismic viridis plasma inferno magma cividis
+
+image_width = 1400
+
+[distance_functions]
+
+dist_funcs = from_center
+
+max_vertical_subdivisions_distance = 5
+max_horizontal_subdivisions_distance = 5
+
+max_vertical_subdivisions_coords = 5
+max_horizontal_subdivisions_coords = 5
+
+
+[coordinate_funcs]
+
+coord_funcs = identity
+
+[misc]
+
+display_every_image = True

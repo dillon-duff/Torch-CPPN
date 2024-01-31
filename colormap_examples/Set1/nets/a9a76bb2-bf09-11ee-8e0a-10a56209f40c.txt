@@ -1,0 +1,10 @@
+RandomNetwork(
+  (layers): Sequential(
+    (0): Linear(in_features=3, out_features=446, bias=True)
+    (1): SiLU()
+    (2): Linear(in_features=446, out_features=330, bias=True)
+    (3): Sigmoid()
+    (4): Linear(in_features=330, out_features=1, bias=True)
+    (5): ReLU6()
+  )
+)
