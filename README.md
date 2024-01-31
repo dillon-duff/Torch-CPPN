@@ -1,6 +1,6 @@
 # Image generation with CPPNs in PyTorch
 ## Getting started
-After cloning the repo, it's suggested to setup a virtualenv and install required packages:
+After cloning the repo, you can setup a venv and install required packages:
 
 ```
 pip install -r requirements.txt
