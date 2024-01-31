@@ -1,0 +1,36 @@
+[network]
+
+min_layers = 2
+max_layers = 6
+
+max_layer_size = 85
+
+big_or_small_layers = False
+
+act_funcs = elu hardshrink hardsigmoid hardtanh hardswish leakyrelu logsigmoid prelu relu relu6 rrelu selu celu gelu sigmoid silu identity mish softplus softshrink softsign tanh tanhshrink
+
+
+[drawing]
+
+color_maps = Pastel1 Pastel2 Paired Accent Dark2 Set1 Set2 Set3 tab10 tab20 tab20b tab20c twilight twilight_shifted hsv PiYG PRGn BrBG PuOr RdGy RdBu RdYlBu RdYlGn Spectral coolwarm bwr seismic viridis plasma inferno magma cividis
+
+image_width = 75
+
+[distance_functions]
+
+dist_funcs = from_center from_nearest_center from_dynamic_spiral_center from_nearest_subdivided_quadrant_center from_concentric_circles from_diagonal from_nearest_edge
+
+max_vertical_subdivisions_distance = 5
+max_horizontal_subdivisions_distance = 5
+
+max_vertical_subdivisions_coords = 5
+max_horizontal_subdivisions_coords = 5
+
+
+[coordinate_funcs]
+
+coord_funcs = wave_distortion to_polar scale_translate identity to_sub_div_coords
+
+[misc]
+
+display_every_image = True

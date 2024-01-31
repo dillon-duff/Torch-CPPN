@@ -1,18 +1,23 @@
-import numpy as np
 import random
+import uuid
+import concurrent.futures
+import multiprocessing
+from functools import partial
+
+import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import matplotlib.colors as mcolors
-import uuid
 
 import torch
 import torch.nn as nn
 import random
 
+
 from configparser import ConfigParser
 
 config = ConfigParser()
-config_file = "config-cool-colors"
+config_file = "config-all-no-cuda"
 
 
 def read_config():
@@ -162,17 +167,17 @@ def distance_from_diagonal(x, y, width, height, **kwargs):
     return distance
 
 
-def compute_output_batch(coords, batch_size=40000):
-    outputs = []
-    for i in range(0, len(coords), batch_size):
-        batch_coords = coords[i : i + batch_size]
-        coords_tensor = torch.tensor(batch_coords, dtype=torch.float32).to("cuda")
-        batch_output = random_network(coords_tensor)
-        outputs.append(batch_output.detach().cpu().numpy())
-        del coords_tensor
-        torch.cuda.empty_cache()
+def compute_output(*args):
+    (x, y, d) = args[0]
+    out = random_network(torch.tensor([x, y, d], dtype=torch.float32))
+    return out.item()
 
-    return np.concatenate(outputs, axis=0)
+
+def compute_output_batch(coords_batch, random_network):
+    coords_tensor = torch.tensor(coords_batch, dtype=torch.float32)
+    with torch.no_grad():
+        outputs = random_network(coords_tensor)
+    return outputs.numpy()
 
 
 def coords_to_sub_div_coords(x, y, **kwargs):
@@ -247,19 +252,6 @@ dist_func_dict = {
     "from_diagonal": distance_from_diagonal,
     "from_nearest_edge": distance_from_nearest_edge,
 }
-
-
-def compute_output(x, y, d):
-    out = random_network(torch.tensor([x, y, d], dtype=torch.float32))
-    return out.item()
-
-
-def compute_output_batch(coords):
-    coords_tensor = torch.tensor(coords, dtype=torch.float32).to("cuda")
-
-    outputs = random_network(coords_tensor)
-
-    return outputs.detach().cpu().numpy()
 
 
 if __name__ == "__main__":
@@ -342,7 +334,7 @@ if __name__ == "__main__":
             "width": width,
         }
 
-        random_network = RandomNetwork().to("cuda")
+        random_network = RandomNetwork()
 
         fig, ax = plt.subplots()
         width_inches = 12
@@ -351,7 +343,7 @@ if __name__ == "__main__":
         x_subsections = params["x_subsections"]
         y_subsections = params["y_subsections"]
 
-        print("Generating image...")
+        print("Generating image...")        
 
         coords = [
             (
@@ -362,9 +354,22 @@ if __name__ == "__main__":
             for j in range(width)
         ]
 
-        output_batch = compute_output_batch(coords)
+        coords_batches = [coords[i : i + 4000] for i in range(0, len(coords), 4000)]
+        wrapper_func = partial(compute_output_batch, random_network=random_network)
 
-        grid = output_batch.reshape(width, width)
+        with multiprocessing.Pool(multiprocessing.cpu_count()) as ex:
+            output_batches = list(
+                ex.map(
+                    wrapper_func,
+                    coords_batches,
+                )
+            )
+
+            grid = np.concatenate(output_batches, axis=0)
+
+        # output_batch = compute_output_batch(coords)
+
+        grid = grid.reshape(width, width)
 
         mat = ax.matshow(grid, cmap=params["cmap"])
         ax.axis("off")
