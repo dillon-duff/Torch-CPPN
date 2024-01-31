@@ -17,12 +17,12 @@ import random
 from configparser import ConfigParser
 
 config = ConfigParser()
-config_file = "config-all-no-cuda"
+config_file = "config-cool-colors"
 
 
 def read_config():
     global min_layers, max_layers, max_layer_size, act_funcs, color_maps, image_width, dist_funcs, max_vertical_subdivisions_distance, max_horizontal_subdivisions_distance, max_vertical_subdivisions_coords, max_horizontal_subdivisions_coords, coord_funcs, display_every_image, big_or_small_layers
-    config.read("config-basic")
+    config.read(config_file)
     min_layers = int(config["network"]["min_layers"])
     max_layers = int(config["network"]["max_layers"])
     max_layer_size = int(config["network"]["max_layer_size"])
@@ -343,7 +343,7 @@ if __name__ == "__main__":
         x_subsections = params["x_subsections"]
         y_subsections = params["y_subsections"]
 
-        print("Generating image...")        
+        print("Generating image...")
 
         coords = [
             (
@@ -354,7 +354,9 @@ if __name__ == "__main__":
             for j in range(width)
         ]
 
-        coords_batches = [coords[i : i + 4000] for i in range(0, len(coords), 4000)]
+        coords_batches = [
+            coords[i : i + 40000] for i in range(0, len(coords), 40000)
+        ]  # Not sure how to pick a good number here
         wrapper_func = partial(compute_output_batch, random_network=random_network)
 
         with multiprocessing.Pool(multiprocessing.cpu_count()) as ex:

@@ -46,11 +46,9 @@ display_every_image = False
 If set to True, the next image won't be generated until you close the display, so you can edit the config file while the display is open and the changes will be reflected in the next image generated. This hopefully can make customizing images quicker and easier
 
 ### Config files
-There are 4 default config files:
+There are 3 default config files:
 
 - <b>config-all</b>, which contains all of the functions and colormaps available enabled
-
-- <b>config-all-no-cuda</b>, which contains all of the functions and colormaps available enabled, but will run only on the CPU (much slower, so everything is smaller)
 
 - <b>config-basic</b>, which only uses basic activation functions and no functions for distance or the coordinates
 

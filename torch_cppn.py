@@ -17,7 +17,7 @@ config_file = "config-cool-colors"
 
 def read_config():
     global min_layers, max_layers, max_layer_size, act_funcs, color_maps, image_width, dist_funcs, max_vertical_subdivisions_distance, max_horizontal_subdivisions_distance, max_vertical_subdivisions_coords, max_horizontal_subdivisions_coords, coord_funcs, display_every_image, big_or_small_layers
-    config.read("config-basic")
+    config.read(config_file)
     min_layers = int(config["network"]["min_layers"])
     max_layers = int(config["network"]["max_layers"])
     max_layer_size = int(config["network"]["max_layer_size"])
